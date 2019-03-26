@@ -39,7 +39,7 @@ RUN /bin/sh src/build-llvm.sh
 # Finally, copy across the tools we built
 FROM centos:6
 
-RUN yum install -y glibc-devel libstdc++-devel readline-devel zlib-devel bzip2-devel openssl-devel git
+RUN yum install -y glibc-devel libstdc++-devel readline-devel zlib-devel bzip2-devel openssl-devel git xz
 
 # Copy the built software over
 COPY --from=builder /usr/local/ /usr/local/
